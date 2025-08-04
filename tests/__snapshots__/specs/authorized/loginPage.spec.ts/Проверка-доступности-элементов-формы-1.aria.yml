@@ -1,1 +1,5 @@
-- text: BRAVO
+- text: Авторизация Логин
+- textbox "Логин"
+- text: Пароль
+- textbox "Пароль"
+- button "Войти" [disabled]

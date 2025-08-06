@@ -3,6 +3,6 @@ import { BasePage } from './BasePage';
 
 export class MainPage extends BasePage {
   async open() {
-    this.page.goto('http://localhost:5173/');
+    await this.page.goto('http://test.tinside.pro/login');
   }
 }

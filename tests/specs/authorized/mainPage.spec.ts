@@ -1,7 +1,4 @@
-import test from '@playwright/test';
+import { test, expect } from '../../fixtures/fixtures';
 import { MainPage } from '../../pages/MainPage';
 
-test('Открытие списка задач', async ({ page }) => {
-  const mainPage = new MainPage(page);
-  await mainPage.open();
-});
+test('Открытие списка задач', async ({ mainPage }) => {});

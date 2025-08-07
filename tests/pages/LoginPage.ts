@@ -12,7 +12,7 @@ export class LoginPage extends BasePage {
       .first();
   }
   async open() {
-    this.page.goto('https://test.tinside.pro/login');
+    await this.page.goto(process.env.TEST_URL as string);
   }
 
   async authFormCorrectAria() {

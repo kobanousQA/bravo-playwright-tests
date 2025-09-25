@@ -11,8 +11,10 @@ export class LoginPage extends BasePage {
       .filter({ hasText: /^АвторизацияЛогинПарольВойти$/ })
       .first();
   }
+
   async open() {
-    await this.page.goto(process.env.TEST_URL as string);
+    await this.page.goto(`${process.env.TEST_URL}${process.env.LOGIN_PATH}`);
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
   async authFormCorrectAria() {

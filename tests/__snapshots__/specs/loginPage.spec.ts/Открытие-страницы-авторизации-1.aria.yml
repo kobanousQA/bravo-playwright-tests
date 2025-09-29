@@ -1,0 +1,5 @@
+- text: Авторизация Логин
+- textbox
+- text: Пароль
+- textbox
+- button "Войти" [disabled]

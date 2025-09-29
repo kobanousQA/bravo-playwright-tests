@@ -37,30 +37,27 @@ export default defineConfig({
     },
 
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
 
-    {
-      name: 'testing',
-      use: {
-        baseURL: process.env.TEST_URL,
-        // storageState: 'tests/fixtures/storageState.json',
-      },
-    },
+    // {
+    //   name: 'testing',
+    //   use: {
+    //     baseURL: process.env.TEST_URL,
+    //     trace: 'on-first-retry',
+    //     screenshot: 'only-on-failure',
+    //   },
+    // },
 
-    {
-      name: 'production',
-      use: {
-        baseURL: process.env.PROD_URL,
-        // storageState: 'tests/fixtures/storageState.json',
-      },
-    },
+    // {
+    //   name: 'production',
+    //   use: {
+    //     baseURL: process.env.PROD_URL,
+    //     trace: 'on-first-retry',
+    //     screenshot: 'only-on-failure',
+    //   },
+    // },
   ],
 
   /* Run your local dev server before starting the tests */

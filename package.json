@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": " ",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "show-report": "npx playwright show-report",
+    "test": "npx playwright test",
+    "test:trace": "npx playwright test --trace=on",
+    "test:headed": "npx playwright test --headed",
+    "test:loginPage": "npx playwright test tests/specs/loginPage.spec.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kobanousQA/bravo-playwright-tests.git"

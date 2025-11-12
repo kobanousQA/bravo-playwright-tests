@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { log } from 'console';
+import { testit } from 'testit-adapter-playwright';
 
 let loginPage: LoginPage;
 
@@ -9,6 +10,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Открытие страницы авторизации', async ({ page }) => {
+  testit.externalId('login_page_opening');
+  testit.displayName('Открытие страницы авторизации');
+  testit.title('Проверка открытия страницы авторизации');
+  testit.description('Тест проверяет открытие страницы авторизации и доступность элементов формы');
+  testit.labels(['login', 'ui', 'smoke']);
+
   await test.step('Перейти на страницу авторизации', async () => {
     await loginPage.open();
   });
